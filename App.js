@@ -5,15 +5,14 @@ import AnimatedGif from './AnimatedGif';
 import VideoPlayer from './VideoPlayer';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import GifPlayer from './GifPlayer';
+import MyStack from './MyStack';
+import { NavigationContainer } from '@react-navigation/native';
+import AppNavigation from './Navigation';
 
 
 export default function App() {
   return (
-    <GestureHandlerRootView>
-      
-      <GifPlayer></GifPlayer>
-      <StatusBar style="auto" />
-      </GestureHandlerRootView>
+    <AppNavigation />
   );
 }
 
