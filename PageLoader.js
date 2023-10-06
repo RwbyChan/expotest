@@ -31,7 +31,7 @@ export default function PageLoader() {
     <View style={styles.main}>
       <WS ref={ref => {this.ws = ref}} url={socket_url} onOpen={onOpen} onMessage={onMessage} onError={onError} onClose={onClose} reconnect></WS>
       { connectionState == 'open' ? (
-        <AppNavigation></AppNavigation>
+        <AppNavigation message={onMessage}></AppNavigation>
       ) : (
         <Text>Close</Text>
       )}

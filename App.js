@@ -8,11 +8,15 @@ import GifPlayer from './GifPlayer';
 import MyStack from './MyStack';
 import PageLoader from './PageLoader';
 import AppNavigation from './Navigation';
+import { PlayerStateProvider } from './PlayerStateContext';
 
 
 export default function App() {
   return (
-    <AppNavigation />
+    <PlayerStateProvider>
+      <AppNavigation />
+    </PlayerStateProvider>
+    
   );
 }
 
